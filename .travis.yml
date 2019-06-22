@@ -4,4 +4,4 @@ services:
 before_install:
     - docker build -t gusdecool/docker-frontend-test -f Dockerfile.dev .
 script:
-    - docker run gusdecool/docker-frontend-test CI=true npm run test -- --coverage
+    - docker run -e CI=true gusdecool/docker-frontend-test npm run test -- --coverage
